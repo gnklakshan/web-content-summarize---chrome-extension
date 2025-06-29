@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extension Options</title>
+  </head>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f6f8fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .form-group {
+      background: #fff;
+      max-width: 420px;
+      margin: 30px auto 20px auto;
+      padding: 28px 32px 18px 32px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cfd8dc;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    input[type="text"]:focus {
+      border-color: #4285f4;
+      outline: none;
+    }
+
+    a {
+      color: #4285f4;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button#save-button {
+      display: block;
+      position: relative;
+      justify-self: end;
+      background: #4285f4;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 32px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(66, 133, 244, 0.08);
+      transition: background 0.2s;
+    }
+
+    button#save-button:hover {
+      background: #3367d6;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      color: #388e3c;
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      border-radius: 6px;
+      padding: 10px 0;
+      margin: 0 auto 20px auto;
+      max-width: 420px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <h1>Web Content Summary Settings</h1>
+
+    <div class="form-group">
+      <label for="api-key">Gemini API Key:</label>
+      <input type="text" id="api-key" placeholder="Enter your Gemini API key" />
+
+      <p>
+        You can obtain your Gemini API key from the
+        <a href="https://ai.google.dev/gemini" target="_blank"
+          >Gemini AI Developer Console</a
+        >. Make sure to keep your API key secure and do not share it publicly.
+      </p>
+      <button id="save-button">Save Settings</button>
+      <p id="success-message" class="success-message">
+        Settings saved successfully!
+      </p>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>
