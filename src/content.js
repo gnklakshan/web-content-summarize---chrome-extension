@@ -9,7 +9,7 @@ function getWebContent() {
 }
 
 chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
-  if (request.action === "GET_WEB_CONTENT") {
+  if (request.type === "GET_WEB_CONTENT") {
     const content = getWebContent();
     sendResponse({ content: content });
   }
