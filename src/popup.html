@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Summarizer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 10px;
+        min-width: 300px;
+      }
+      h2 {
+        color: #333;
+      }
+      .options {
+        margin-bottom: 10px;
+      }
+      select,
+      button {
+        padding: 5px;
+        margin-right: 5px;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        white-space: pre-wrap; /* Allows text to wrap */
+        word-break: break-word; /* Breaks long words */
+      }
+      #result {
+        max-height: 300px; /* Limit height */
+        overflow-y: auto; /* Enable scrolling */
+      }
+      #result ul {
+        list-style-type: disc; /* Use disc bullets for unordered lists */
+        padding-left: 20px; /* Indent the list */
+      }
+      #result li {
+        margin-bottom: 5px; /* Space between list items */
+      }
+      #copy-button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #copy-button:hover {
+        background-color: #45a049;
+      }
+      #summarize {
+        background-color: #008cba;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      #summarize:hover {
+        background-color: #007b9e;
+      }
+      #summary-type {
+        width: 150px;
+      }
+
+      .loader {
+        border: 4px solid #f3f3f3; /* Light grey */
+        border-top: 4px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 2s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Summerize Web Content</h2>
+    <div class="options">
+      <select id="summary-type">
+        <option value="brief">Brief</option>
+        <option value="detailed">Detailed</option>
+        <option value="bullets">Bullet Points</option>
+      </select>
+      <button id="summarize">Summarize</button>
+      <button id="copy-button">Copy</button>
+    </div>
+
+    <pre id="result">Select a type and click Summarize..</pre>
+  </body>
+</html>
